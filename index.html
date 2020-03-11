@@ -3,72 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-
     <title>pet尾部</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        .zzj-footer {
-            width: 1200px;
-            margin: 10px auto;
-
-
-        }
-
-        .zzj-footer .brand-link {
-            display: block;
-
-            overflow: hidden;
-            text-align: center;
-
-
-        }
-
-        .zzj-footer .brand-link a {
-            text-decoration: none;
-            font: 12px 'Microsoft Yahei', Tahoma, Simsun;
-            color: #999;
-            margin-left: 15px;
-
-            vertical-align: middle;
-
-        }
-
-        .zzj-footer .brand-link a img {
-            height: 18px;
-
-            vertical-align: middle;
-        }
-
-        .zzj-center {
-            width: 1200px;
-
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .zzj-center a {
-            text-decoration: none;
-        }
-
-        .zzj-text {
-            text-align: center;
-            font: 12px 'Microsoft Yahei', Tahoma, Simsun;
-            padding-top: 20px;
-        }
-
-        .zzj-text a {
-            text-decoration: none;
-            color: #444;
-            font: 12px 'Microsoft Yahei', Tahoma, Simsun;
-
-            margin-left: 5px;
-        }
-    </style>
-
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
@@ -142,38 +78,8 @@
 
 
     </footer>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
-<script>
-    (function () {
-        let foot = document.getElementById('brand-link')
-        let text = document.getElementById('zzj-text')
 
-        function addHoveEvent(parent) {
-            var opation = parent.getElementsByTagName("a");
-            console.log(opation)
-            for (let i = 0; i < opation.length; i++) {
-                opation[i].onmouseover = function () {
-
-                    let siblings = this.parentNode.children;
-                    let id = this.parentNode.index;// 0--3
-                    for (let j = 0; j < siblings.length; j++) {
-                        siblings[j].style.color = "";
-                        siblings[j].style.borderBottom = '';
-                    }
-                    this.style.color = "red";
-                    this.style.borderBottom = '1px solid red'
-                }
-
-                opation[i].onmouseleave = function () {
-                    this.style.color = "";
-                    this.style.borderBottom = ''
-                }
-            }
-        }
-
-        addHoveEvent(foot)
-        addHoveEvent(text)
-    }())
-</script>
