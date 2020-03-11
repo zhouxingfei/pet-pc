@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>pet尾部</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .zzj-footer {
+            width: 1200px;
+            margin: 10px auto;
+
+
+        }
+
+        .zzj-footer .brand-link {
+            display: block;
+
+            overflow: hidden;
+            text-align: center;
+
+
+        }
+
+        .zzj-footer .brand-link a {
+            text-decoration: none;
+            font: 12px 'Microsoft Yahei', Tahoma, Simsun;
+            color: #999;
+            margin-left: 15px;
+
+            vertical-align: middle;
+
+        }
+
+        .zzj-footer .brand-link a img {
+            height: 18px;
+
+            vertical-align: middle;
+        }
+
+        .zzj-center {
+            width: 1200px;
+
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .zzj-center a {
+            text-decoration: none;
+        }
+
+        .zzj-text {
+            text-align: center;
+            font: 12px 'Microsoft Yahei', Tahoma, Simsun;
+            padding-top: 20px;
+        }
+
+        .zzj-text a {
+            text-decoration: none;
+            color: #444;
+            font: 12px 'Microsoft Yahei', Tahoma, Simsun;
+
+            margin-left: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <footer class="zzj-footer" id="zzj-footer">
+        <span class="brand-link" id="brand-link">
+            <a href="javescript:;" class="active">关于我们</a>
+            <a href="javescript:;"><img
+                    src="https://static.epetbar.com/static_web/pc/src/images/background/weibo_logo.png" alt="">
+                E宠商城</a>
+            <a href="javescript:;"><img
+                    src="https://static.epetbar.com/static_web/pc/src/images/background/weixin_logo.png" alt="">
+                E宠商城</a>
+            <a href="javescript:;"><img
+                    src="https://static.epetbar.com/static_web/pc/src/images/background/baidu_log.png" alt="">
+
+                E宠商城百家号</a>
+            <a href="javescript:;"><img
+                    src="https://static.epetbar.com/static_web/pc/src/images/background/toutiao_logo.png" alt="">
+
+                E宠说</a>
+            <a href="javescript:;">E宠公益</a>
+            <a href="javescript:;">联系我们</a>
+            <a href="javescript:;">公司地址</a>
+            <a href="javescript:;">应急响应</a>
+            <a href="javescript:;">仓储中心</a>
+            <a href="javescript:;">用户协议</a>
+
+        </span>
+        <div class="zzj-center">
+            <a href="javescript:;"><img src="https://static.epetbar.com/www/newFooter/12315.png" alt="">
+
+            </a>
+            <a href="javescript:;"><img src="https://static.epetbar.com/www/newFooter/360.png" alt="">
+
+            </a>
+            <a href="javescript:;"><img src="https://static.epetbar.com/www/newFooter/chengxin.png" alt="">
+
+            </a>
+            <a href="javescript:;"><img src="https://static.epetbar.com/www/newFooter/shiming.png" alt="">
+
+            </a>
+            <a href="javescript:;"><img src="https://static.epetbar.com/www/newFooter/tx.png" alt="">
+
+            </a>
+            <a href="javescript:;"><img src="https://static.epetbar.com/www/newFooter/jybz.png" alt="">
+
+            </a>
+            <a href="javescript:;"><img src="https://static.epetbar.com/www/newFooter/cqgs.png" alt="">
+
+            </a>
+            <span><img src="https://static.epetbar.com/www/newFooter/baiq.png" alt=""></span>
+            <span><img src="https://static.epetbar.com/www/newFooter/wsls.png" alt=""></span>
+            <span><img src="https://static.epetbar.com/www/newFooter/sfqy.png" alt=""></span>
+            <span><img src="https://static.epetbar.com/www/newFooter/bhdw.png" alt=""></span>
+
+            <span><img src="https://static.epetbar.com/www/newFooter/yxqy.png" alt=""></span>
+            <span><img src="https://static.epetbar.com/www/newFooter/bhdw.png" alt=""></span>
+        </div>
+        <p id="zzj-text" class="zzj-text">
+            <a href="javescript:;">渝ICP备10002905号-1</a>
+            <a href="javescript:;">渝ICP备10002905号-3</a>
+            <a href="javescript:;">营业执照</a>
+            <a href="javescript:;">兽药经营许可证</a>
+            增值电信业务经营许可证：渝B2-20140042 Copyright © 2007-2020 epet.com 　重庆易宠科技有限公司
+
+        </p>
+
+
+
+
+
+
+    </footer>
+</body>
+
+</html>
+<script>
+    (function () {
+        let foot = document.getElementById('brand-link')
+        let text = document.getElementById('zzj-text')
+
+        function addHoveEvent(parent) {
+            var opation = parent.getElementsByTagName("a");
+            console.log(opation)
+            for (let i = 0; i < opation.length; i++) {
+                opation[i].onmouseover = function () {
+
+                    let siblings = this.parentNode.children;
+                    let id = this.parentNode.index;// 0--3
+                    for (let j = 0; j < siblings.length; j++) {
+                        siblings[j].style.color = "";
+                        siblings[j].style.borderBottom = '';
+                    }
+                    this.style.color = "red";
+                    this.style.borderBottom = '1px solid red'
+                }
+
+                opation[i].onmouseleave = function () {
+                    this.style.color = "";
+                    this.style.borderBottom = ''
+                }
+            }
+        }
+
+        addHoveEvent(foot)
+        addHoveEvent(text)
+    }())
+</script>
