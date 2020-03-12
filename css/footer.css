@@ -89,13 +89,14 @@
 /*njn-footer-wrapper----------------------------------*/
 .njn-footer-wrapper{
     /* width: 1367px; */
-    height: 182px;
+    /* height: 182px; */
     margin: 0 auto;
     /* background-color: yellowgreen; */
 }
 .njn-info{
     /* width: 1200px; */
-    height: 132px;
+    /* height: 132px; */
+    overflow: hidden;
     margin: 0 auto;
     padding: 25px 0;
     /* background-color: brown; */
@@ -136,7 +137,7 @@
 }
 .njn-gouwu {
     width:56px;
-    height:106px ;
+    /* height:106px ; */
     float: left;
     margin: 0 auto;
     /* background-color: chocolate; */
@@ -157,7 +158,7 @@
 .njn-peisong{
     float: left;
     width: 56px;
-    height: 58px;
+    /* height: 58px; */
     margin: 0 auto;
     /* background-color: chocolate;   */
 }
@@ -172,7 +173,7 @@
 }
 .njn-shopping-guide{
     width:70px;
-    height:106px ;
+    /* height:106px ; */
     float: left;
     /* background-color: chocolate; */
     margin-left: 40px;
@@ -180,7 +181,7 @@
 }
 .njn-app-code{
     width:92px;
-    height:137px ;
+    /* height:137px ; */
     float: left;
     /* background-color: chocolate; */
     margin: -5px 36px 0 20px;
@@ -198,7 +199,7 @@
 }
 .njn-wx-code{
     width: 92px;
-    height: 137px;
+    /* height: 137px; */
     float: left;
     /* background-color: blueviolet; */
     margin-left:71px;
