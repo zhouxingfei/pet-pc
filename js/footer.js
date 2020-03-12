@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 (function () {
     //倪静楠-js
     let objs = document.getElementsByClassName('njn-mouse');
