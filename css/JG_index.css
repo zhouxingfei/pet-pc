@@ -1,0 +1,484 @@
+/* 蒋冠 */
+/* 删除默认样式的CSS */
+i {
+    font-style: normal;
+}
+
+a {
+    color: #444;
+}
+
+/* 通用样式 */
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* 版心样式 */
+#jgMenu {
+    width: 1200px;
+    margin: 10px auto;
+    position: relative;
+}
+
+/* 猫狗选择器 & 商品分类 */
+#jgTogether {
+    width: 228px;
+    height: 392px;
+    background: #fff;
+    font-size: 16px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+/* 选🐱还是选🐕 */
+#jgDogOrCat .jgChooseTitle,
+#jgCategoryOfGoods .jgPetName {
+    width: 114px;
+    height: 34px;
+    border: 1px solid #e1e1e1;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 32px;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+}
+
+#jgCategoryOfGoods .jgPetName {
+    left: 114px;
+}
+
+#jgDogOrCat .jgChooseTitle:hover i.arrow,
+#jgCategoryOfGoods .jgPetName:hover i.arrow {
+    transform: rotate(180deg);
+    transition: .3s;
+}
+
+#jgDogOrCat .jgChooseTitle i.arrow,
+#jgCategoryOfGoods .jgPetName i.arrow {
+    display: inline-block;
+    width: 16px;
+    height: 13px;
+    background: url(../img/sprit-bg.png) no-repeat;
+    background-position: -17px -1257px;
+    transition: .3s;
+}
+
+#jgCategoryOfGoods .jgPetName i.arrow {
+    width: 13px;
+    height: 7px;
+    background-position: -17px -1276px;
+}
+
+/* 左侧内容部分 */
+#jgDogOrCat ul,
+#jgCategoryOfGoods ul.jgOuterBox {
+    position: absolute;
+    top: 32px;
+    width: 100%;
+    height: 360px;
+    border-top: 2px solid transparent;
+    box-sizing: border-box;
+}
+
+/* 选择猫狗的内容区域 */
+#jgDogOrCat ul {
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+}
+
+#jgDogOrCat ul li {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    position: relative;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+#jgDogOrCat ul li.selected {
+    background: #f5f5f5;
+}
+
+#jgDogOrCat ul li a {
+    display: block;
+    padding-top: 30px;
+}
+
+#jgDogOrCat ul li a i {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    display: block;
+    background: url(../img/new_petcate.png) 0 -180px;
+}
+
+#jgDogOrCat ul li div {
+    width: 110px;
+    height: 60px;
+    margin: auto;
+}
+
+#jgDogOrCat ul li div p {
+    line-height: 24px;
+    padding-bottom: 4px;
+    color: #333;
+    font-size: 12px;
+}
+
+#jgDogOrCat ul li div p span {
+    color: #f03e3e;
+}
+
+#jgDogOrCat ul li div a.jgClickToDogMall,
+#jgDogOrCat ul li div a.jgClickToCatMall {
+    width: 108px;
+    height: 28px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #e74085;
+    color: #e74085;
+    font-size: 12px;
+    padding: 0;
+}
+
+#jgDogOrCat ul li.selected div a.jgClickToDogMall,
+#jgDogOrCat ul li.selected div a.jgClickToCatMall {
+    border: 1px solid #aeaeae;
+    color: #aeaeae;
+}
+
+#jgDogOrCat ul li a.jgLeftHover {
+    display: block;
+    padding: 0;
+    width: 27px;
+    height: 178px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: .3s;
+}
+
+/* TODO:这里的悬浮滑出效果有bug,鼠标无法进入滑出区域,用JS重新写了（mouseenter/mouseleave) */
+/* #jgDogOrCat ul li:hover a.jgLeftHover {
+    left: -27px;
+    transition: .3s;
+} */
+
+/* 商品分类区域，默认显示 */
+#jgCategoryOfGoods .jgOuterBox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#jgCategoryOfGoods .jgOuterBox .jgOuterMenu,
+#jgCategoryOfGoods .jgOuterBox .special {
+    height: 51px;
+}
+
+#jgCategoryOfGoods .jgOuterBox .jgOuterMenu .noUse,
+#jgCategoryOfGoods .jgOuterBox .special .noUse{
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    border: 1px solid transparent;
+    border-bottom: 1px dotted #dfdfdf;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+#jgCategoryOfGoods .jgOuterBox .jgOuterMenu span {
+    display: block;
+    width: 0px;
+    height: 0px;
+    border: 3.5px solid transparent;
+    border-left-color: #aeaeae;
+    border-left-width: 5px;
+    float: right;
+    margin-top: 20px;
+}
+
+#jgCategoryOfGoods .jgOuterBox li.jgOuterMenu a {
+    display: inline-block;
+    width: 88px;
+    height: 100%;
+    line-height: 50px;
+    font-size: 14px;
+    padding: 0 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#jgCategoryOfGoods .jgOuterBox li.jgOuterMenu:hover .noUse,
+#jgCategoryOfGoods .jgOuterBox .special:hover .noUse{
+    border: 1px solid #62a727;
+    border-left: none;
+    border-right-color: #fff;
+}
+
+#jgCategoryOfGoods .jgOuterBox li.jgOuterMenu:hover span{
+    display: none;
+}
+
+#jgCategoryOfGoods .jgOuterBox .jgOuterMenu a:hover {
+    color: #248DCC;
+}
+
+#jgCategoryOfGoods .jgOuterBox li.jgOuterMenu:hover div.hover {
+    display: block;
+}
+
+/* 内容区 */
+/* 有bug */
+#jgCategoryOfGoods .jgOuterBox div.hover , #jgCategoryOfGoods .jgOuterBox div.specHover{
+    position: absolute;
+    left: 227px;
+    top: 0;
+    z-index: 2;
+    width: 570px;
+    border: 1px solid #62a727;
+    background: #fff;
+    line-height: 30px;
+    box-shadow: 3px 3px 4px #777;
+    padding: 10px;
+    
+    display: none;
+}
+#jgCategoryOfGoods .jgOuterBox div.hover .title{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+}
+#jgCategoryOfGoods .jgOuterBox div.hover .title .logoBefore{
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    background: url(../img/jgContainPicExample.jpg);
+}
+#jgCategoryOfGoods .jgOuterBox div.hover .title a{
+    height: 35px;
+    display: inline-block;
+    line-height: 35px;
+    font-size: 16px;
+    vertical-align: top;
+    padding-left: 10px;
+}
+#jgCategoryOfGoods .jgOuterBox div.hover .title a:hover , #jgCategoryOfGoods .jgOuterBox div.hover .details a:hover{
+    color: #248dcc;
+}
+#jgCategoryOfGoods .jgOuterBox div.hover .title .logoAfter{
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    background: url(../img/jgBg.png) -470px -240px no-repeat;
+}
+
+#jgCategoryOfGoods .jgOuterBox div.hover .title , #jgCategoryOfGoods .jgOuterBox div.hover .details li{
+    border-bottom: 1px #ddd dotted;
+    padding: 5px 0;
+}
+#jgCategoryOfGoods .jgOuterBox div.hover .details li{
+    padding-left: 55px;
+    font-size: 12px;
+}
+#jgCategoryOfGoods .jgOuterBox div.hover .details a{
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 6px 0 7px;
+    border-left: 1px solid #ddd;
+}
+#jgCategoryOfGoods .jgOuterBox div.hover .details a.typesOfGoods{
+    color: green;
+    font-weight: bold;
+    padding-right: 10px;
+    border: none;
+
+}
+#jgCategoryOfGoods .jgOuterBox div.hover .details img{
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+/* 内容区的特殊存在-最底部 */
+#jgCategoryOfGoods .jgOuterBox li.special{
+    height: 52px;
+    line-height: 52px;
+    text-indent: 9px;
+}
+
+#jgCategoryOfGoods .jgOuterBox li.special a.specTitle{
+    color: #22990d;
+    font-size: 14px;
+}
+
+#jgCategoryOfGoods .jgOuterBox li.special img.specLeft{
+    width: 17px;
+    vertical-align: sub;
+    margin-right: 5px;
+}
+
+#jgCategoryOfGoods .jgOuterBox li.special i.specRight{
+    margin-left: 2px;
+    width: 24px;
+    background: #fb6003;
+    padding: 0 9px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+#jgCategoryOfGoods .jgOuterBox div.specHover{
+    position: absolute;
+    top: 0px;
+    left: 227px;
+    z-index: 2;
+    width: 760px;
+    background: #fff;
+    padding: 10px 8px ;
+    display: none;
+}
+
+#jgCategoryOfGoods .jgOuterBox div.specHover .specImgs a{
+    width: 360px;
+    height: 172px;
+    display: block;
+    float: left;
+    position: relative;
+    margin: 5px;
+}
+
+#jgCategoryOfGoods .jgOuterBox div.specHover .specImgs a img{
+    width: 100%;
+    height: 100%;
+}
+
+#jgCategoryOfGoods .jgOuterBox div.specHover .specImgs a span{
+    background: url(../img/jgTextbg3.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: -5px;
+    bottom: 10px;
+    display: inline-block;
+    width: 94px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #fff;
+    text-indent: 28px;
+}
+
+#jgCategoryOfGoods .jgOuterBox div.specHover .specLink{
+    display: block;
+    width: 110px;
+    height: 24px;
+    padding: 18px 0 10px;
+    margin: 0 auto 10px;
+}
+
+#jgCategoryOfGoods .jgOuterBox li.special:hover  div.specHover{
+    display: block;
+}
+
+
+
+/* 顶部详情页区域 */
+#jgDetailPages{
+    width: 970px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    left: 228px;
+    background: #fff;
+}
+#jgDetailPages nav{
+    height: 34px;
+    
+}
+#jgDetailPages nav a{
+    float: left;
+    height: 100%;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 34px;
+    color: #000;
+    font-weight: 700;
+}
+#jgDetailPages nav a i{
+    display: inline-block;
+    width: 13px;
+    height: 17px;
+    background: url(../img/sprit-bg.png) no-repeat -35px -1280px;
+    vertical-align: sub;
+    margin-right: 6px;
+}
+#jgDetailPages nav a.detailSpec{
+    padding-left: 25px;
+}
+#jgDetailPages nav a:hover{
+    color: #409b49;
+}
+#jgDetailPages nav a:hover > i{
+    transform: rotate(360deg);
+    transition: transform .2s ease-in;
+}
+
+
+/* 轮播图区域 */
+/* 轮播时整个这片区域的背景色随之变化，拿JS实现。 */
+#jgSwiper .swiper-container {
+    width: 770px;
+    height: 360px;
+    background: #000;
+    position: absolute;
+    top: 32px;
+    left: 228px;
+} 
+#jgSwiper .swiper-container img{
+    height: 100%;
+    
+}
+#jgSwiper .swiper-container .my-bullet{
+    width:21px;
+    height:21px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    background:#999;
+    opacity:1;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+#jgSwiper .swiper-container .my-bullet-active{
+    background: #fff;
+    color: #000;
+}
+
+
+/* 右侧区域 */
+#jgAside{
+    width: 200px;
+    height: 360px;
+    background: #fff;
+    position: absolute;
+    top: 32px;
+    right: 2px;
+    overflow: hidden;
+}
+#jgAside a {
+    display: block;
+    border-bottom: 1px dotted #ddd;
+    transition: all .4s ease-out;
+}
+#jgAside a:hover{
+    transition: all .4s ease-out;
+    transform: translate(-12px);
+}
