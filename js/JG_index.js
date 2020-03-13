@@ -10,13 +10,18 @@
     jgDogOrCat.onmouseenter= function(){
         jgChoosePet.style.display = 'block';
         jgOuterBox.style.display = 'none';
+        jgDogOrCat.style.background = 'transparent';
+        jgCategoryOfGoods.style.background = '#fff';
     }
     jgCategoryOfGoods.onmouseenter= function(){
         jgOuterBox.style.display = 'block';
         jgChoosePet.style.display = 'none';
+        jgCategoryOfGoods.style.background = 'transparent';
+        jgDogOrCat.style.background = '#fff';
     }
 
     // 选狗还是选猫?
+    let titleName = document.getElementById('titleName');
     let jgChooseDog = document.getElementsByClassName('jgChooseDog')[0];
     let jgChooseCat = document.getElementsByClassName('jgChooseCat')[0];
     let jgClickToDogMall = document.getElementsByClassName('jgClickToDogMall')[0];
@@ -27,13 +32,16 @@
         jgChooseDog.classList.remove ('selected');
         jgClickToDogMall.innerHTML = '切换到狗狗站'
         jgChooseCat.classList.add ('selected');
-        jgClickToCatMall.innerHTML = '正在猫猫站溜达...'
+        jgClickToCatMall.innerHTML = '正在猫猫站溜达...';
+        titleName.innerHTML = '猫猫';
+
     }
     jgChooseDog.onclick = function(){
         jgChooseCat.classList.remove ('selected');
         jgClickToCatMall.innerHTML = '切换到狗狗站'
         jgChooseDog.classList.add ('selected');
-        jgClickToDogMall.innerHTML = '正在猫猫站溜达...'
+        jgClickToDogMall.innerHTML = '正在猫猫站溜达...';
+        titleName.innerHTML = '狗狗';
     }
 
 
