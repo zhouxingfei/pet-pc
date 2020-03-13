@@ -1,0 +1,171 @@
+/* 导航 star */
+.ph-headerTop{
+    height: 28px;
+    border-bottom: 1px solid #ddd;
+    background: #f5f5f5;
+   display: flex;
+}
+.ph{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+.w-max{
+    width: 1200px;
+}
+.ct{
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    color: #444;
+}
+a:hover{
+    color: aqua;
+}
+.cf60:hover{
+    color:#F60
+}
+.header-tl{
+display: flex;
+line-height: 28px;
+}
+.header-tl li{
+    padding: 0 5px;
+}
+.epet-index-brand{
+   background: url(../img/index/epetbrand.png) no-repeat;
+   background-position: 0 8px;
+    display: inline-block;
+    text-indent: 16px;
+}
+.epetbrand{
+    display: inline-block;
+    height: 28px;
+    text-indent: 19px;
+    background-position: -9px -425px;
+}
+.header_topri li.cart-t i {
+    background-position: -291px -46px;
+    width: 14px;
+    height: 14px;
+}
+.header_topri li i, .weibo a, .rss_btn, .cartbtn, .fuwu ul li span, .paim_box, .hot_name i, .footer p a, .lis_plbox, .close, .epetbrand, .close-code, .zt-list1-1 li a:hover, .zt-list1-1 li.this a, .phonecode, .saving {
+    background-image: url(../img/index/bg.png);
+    background-repeat: no-repeat;
+}
+.cred{
+    color: red;
+}
+.header_topri{
+    padding-top: 1px;
+    display: flex;
+    line-height: 27px;
+   padding-left: 100px;
+}
+.header_topri li{
+    /* display: inline; */ 
+    padding: 0 5px;
+    position: relative;
+    z-index: 120;
+    border: 1px solid #F5F5F5;
+    border-bottom: 0;
+}
+
+.hearder{
+    /* padding-top: 33px; */
+    height: 100px;
+}
+.rel{
+    display: flex;
+    justify-content: space-between;
+}
+.lo{
+    display: inline-block;
+    width: 268px;
+    height: 94px;
+    background: url(../img/index/epet-logo.png) no-repeat 0 -12px;
+    margin-top: 7px;    
+}
+.search{
+    margin: 23px 0 0 33px;
+}
+.search-form{
+    width: 498px;
+    height: 34px;
+    display: inline-block;
+}
+.search input{
+    border: #459d36 solid 2px;
+    background: 0 0;
+    padding: 0 5px 0 15px;
+    width: 382px;
+    height: 30px;
+    outline: 0;
+    line-height: 30px;
+    font-size: 14px;
+    float: left;
+    box-sizing: inherit;
+}
+.search button{
+    border: 0;
+    width: 73px;
+    height: 34px;
+    vertical-align: top;
+    cursor: pointer;
+    background-color: #459d36;
+    color: #FFF;
+    font-size: 14px;
+}
+
+.keywords{
+    margin: 10px 0;
+    width: 498px;
+    height: 17px;
+    overflow: hidden;
+}
+.keywords a.cred {
+    color: red;
+}
+.keywords span {
+    color: #999;
+    margin: 0 10px;
+}
+.keywords a:hover {
+    color: #444;
+}
+.keywords a, .keywords span, .keywords label {
+    display: inline;
+    white-space: nowrap;
+    color: #999;
+}
+
+.go-buy {
+    margin: 23px 0 0;
+    width: 130px;
+    height: 39px;
+    text-align: center;
+    text-indent: 2em;
+    background: url(../img/index/shopping-cart.gif) no-repeat;
+}
+.go-buy a {
+    line-height: 39px;
+}
+.c666 {
+    color: #666;
+}
+/* 导航 end */
+
+/* 中心内容区域 star */
+
+
+
+/* 中心内容区域 end  */
+/* * {
+    padding: 0;
+    margin: 0;
+}
+body {
+    min-width: 1200px;
+    background-color: #f5f5f5;
+} */
