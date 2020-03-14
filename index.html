@@ -1258,7 +1258,7 @@
 
             },
             on: {
-                autoplay: function () {
+                slideChange: function () {
                     console.log(this.activeIndex)
                     // 轮播图更换同时更换背景
                     let jgBGBox = document.getElementById('jgBGBox');
@@ -1267,6 +1267,7 @@
 
                     jgBGBox.style.background = jgColorAry[this.activeIndex-1];
                 },
+
             },
         });       
     </script>
