@@ -164,12 +164,13 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
-    transition: .3s;
+    z-index: -400;
+    /* transition: .3s; */
 }
 
 /* TODO:这里的悬浮滑出效果有bug,鼠标无法进入滑出区域,用JS重新写了（mouseenter/mouseleave) */
  #jgDogOrCat ul li:hover a.jgLeftHover {
+    z-index: 10;
     left: -27px;
     transition: .3s;
 } 
