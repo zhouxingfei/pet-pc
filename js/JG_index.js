@@ -11,12 +11,16 @@
         jgChoosePet.style.display = 'block';
         jgOuterBox.style.display = 'none';
         jgDogOrCat.style.background = 'transparent';
+        jgDogOrCat.style.color = '#fff';
+        jgCategoryOfGoods.style.color = '#000';
         jgCategoryOfGoods.style.background = '#fff';
     }
     jgCategoryOfGoods.onmouseenter= function(){
         jgOuterBox.style.display = 'block';
         jgChoosePet.style.display = 'none';
         jgCategoryOfGoods.style.background = 'transparent';
+        jgCategoryOfGoods.style.color = '#fff';
+        jgDogOrCat.style.color = '#000';
         jgDogOrCat.style.background = '#fff';
     }
 

@@ -16,9 +16,7 @@ a {
 }
 
 /*背景图区域*/
-#jgBGBox{
-    /*background: #000;*/
-}
+
 
 /* 版心样式 */
 #jgMenu {
@@ -81,7 +79,7 @@ a {
 #jgDogOrCat ul.jgChoosePet,
 #jgCategoryOfGoods ul.jgOuterBox {
     position: absolute;
-    top: 32px;
+    top: 34px;
     width: 100%;
     height: 360px;
     border-top: 2px solid transparent;
@@ -190,10 +188,12 @@ a {
 #jgCategoryOfGoods .jgOuterBox .jgOuterMenu .noUse,
 #jgCategoryOfGoods .jgOuterBox .special .noUse{
     width: 100%;
+    height: 51px;
     position: absolute;
     z-index: 5;
     border: 1px solid transparent;
-    border-bottom: 1px dotted #dfdfdf;
+    border-top: 1px dotted #dfdfdf;
+    /* border-bottom: 1px dotted #dfdfdf; */
     padding: 0 16px;
     box-sizing: border-box;
 }
@@ -224,6 +224,10 @@ a {
     border: 1px solid #62a727;
     border-left: none;
     border-right-color: #fff;
+    background: #fff;
+}
+#jgCategoryOfGoods .jgOuterBox li.jgOuterMenu:hover +li .noUse{
+    border-top: none;
 }
 
 #jgCategoryOfGoods .jgOuterBox li.jgOuterMenu:hover span{
@@ -342,7 +346,7 @@ a {
     position: absolute;
     top: 0px;
     left: 227px;
-    z-index: 5;
+    z-index: 4;
     width: 760px;
     background: #fff;
     padding: 10px 8px ;
