@@ -9,7 +9,7 @@ a {
 }
 
 /* 通用样式 */
-.clearfix::after{
+.clearfix::after {
     content: '';
     display: block;
     clear: both;
@@ -21,7 +21,7 @@ a {
 /* 版心样式 */
 #jgMenu {
     width: 1200px;
-    margin: 10px auto;
+    margin: 10px auto 2px;
     position: relative;
 }
 
@@ -85,6 +85,7 @@ a {
     border-top: 2px solid transparent;
     box-sizing: border-box;
     background: #fff;
+    z-index: 1;
 }
 
 /* 选择猫狗的内容区域 */
@@ -99,6 +100,7 @@ a {
     height: 50%;
     text-align: center;
     position: relative;
+    background: #fff;
 }
 
 #jgDogOrCat ul li.selected {
@@ -152,6 +154,9 @@ a {
 #jgDogOrCat ul li.selected div a.jgClickToCatMall {
     border: 1px solid #aeaeae;
     color: #aeaeae;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 #jgDogOrCat ul li a.jgLeftHover {
@@ -166,12 +171,12 @@ a {
     transition: .3s;
 }
 
-/* TODO:这里的悬浮滑出效果有bug,鼠标无法进入滑出区域,用JS重新写了（mouseenter/mouseleave) */
- #jgDogOrCat ul li:hover a.jgLeftHover {
-    z-index: 10;
+/* TODO:这里的悬浮滑出效果有bug,鼠标无法进入滑出区域,是如何解决的？ */
+#jgDogOrCat ul li:hover a.jgLeftHover {
+    /* z-index: -400; */
     left: -27px;
     transition: .3s;
-} 
+}
 
 /* 商品分类区域，默认显示 */
 #jgCategoryOfGoods .jgOuterBox {
@@ -186,7 +191,7 @@ a {
 }
 
 #jgCategoryOfGoods .jgOuterBox .jgOuterMenu .noUse,
-#jgCategoryOfGoods .jgOuterBox .special .noUse{
+#jgCategoryOfGoods .jgOuterBox .special .noUse {
     width: 100%;
     height: 51px;
     position: absolute;
@@ -219,18 +224,20 @@ a {
     box-sizing: border-box;
     overflow: hidden;
 }
+
 #jgCategoryOfGoods .jgOuterBox li.jgOuterMenu:hover .noUse,
-#jgCategoryOfGoods .jgOuterBox .special:hover .noUse{
+#jgCategoryOfGoods .jgOuterBox .special:hover .noUse {
     border: 1px solid #62a727;
     border-left: none;
     border-right-color: #fff;
     background: #fff;
 }
-#jgCategoryOfGoods .jgOuterBox li.jgOuterMenu:hover +li .noUse{
+
+#jgCategoryOfGoods .jgOuterBox li.jgOuterMenu:hover+li .noUse {
     border-top: none;
 }
 
-#jgCategoryOfGoods .jgOuterBox li.jgOuterMenu:hover span{
+#jgCategoryOfGoods .jgOuterBox li.jgOuterMenu:hover span {
     display: none;
 }
 
@@ -244,7 +251,8 @@ a {
 
 /* 内容区 */
 /* 有bug */
-#jgCategoryOfGoods .jgOuterBox div.hover , #jgCategoryOfGoods .jgOuterBox div.specHover{
+#jgCategoryOfGoods .jgOuterBox div.hover,
+#jgCategoryOfGoods .jgOuterBox div.specHover {
     position: absolute;
     left: 227px;
     top: 0;
@@ -255,21 +263,24 @@ a {
     line-height: 30px;
     box-shadow: 3px 3px 4px #777;
     padding: 10px;
-    
+
     display: none;
 }
-#jgCategoryOfGoods .jgOuterBox div.hover .title{
+
+#jgCategoryOfGoods .jgOuterBox div.hover .title {
     height: 35px;
     line-height: 35px;
     padding-left: 10px;
 }
-#jgCategoryOfGoods .jgOuterBox div.hover .title .logoBefore{
+
+#jgCategoryOfGoods .jgOuterBox div.hover .title .logoBefore {
     width: 35px;
     height: 35px;
     display: inline-block;
     background: url(../img/jgContainPicExample.jpg);
 }
-#jgCategoryOfGoods .jgOuterBox div.hover .title a{
+
+#jgCategoryOfGoods .jgOuterBox div.hover .title a {
     height: 35px;
     display: inline-block;
     line-height: 35px;
@@ -277,63 +288,71 @@ a {
     vertical-align: top;
     padding-left: 10px;
 }
-#jgCategoryOfGoods .jgOuterBox div.hover .title a:hover , #jgCategoryOfGoods .jgOuterBox div.hover .details a:hover{
+
+#jgCategoryOfGoods .jgOuterBox div.hover .title a:hover,
+#jgCategoryOfGoods .jgOuterBox div.hover .details a:hover {
     color: #248dcc;
 }
-#jgCategoryOfGoods .jgOuterBox div.hover .title .logoAfter{
+
+#jgCategoryOfGoods .jgOuterBox div.hover .title .logoAfter {
     width: 35px;
     height: 35px;
     display: inline-block;
     background: url(../img/jgBg.png) -470px -240px no-repeat;
 }
 
-#jgCategoryOfGoods .jgOuterBox div.hover .title , #jgCategoryOfGoods .jgOuterBox div.hover .details li{
+#jgCategoryOfGoods .jgOuterBox div.hover .title,
+#jgCategoryOfGoods .jgOuterBox div.hover .details li {
     border-bottom: 1px #ddd dotted;
     padding: 5px 0;
 }
-#jgCategoryOfGoods .jgOuterBox div.hover .details li{
+
+#jgCategoryOfGoods .jgOuterBox div.hover .details li {
     padding-left: 55px;
     font-size: 12px;
 }
-#jgCategoryOfGoods .jgOuterBox div.hover .details a{
+
+#jgCategoryOfGoods .jgOuterBox div.hover .details a {
     display: inline-block;
     height: 16px;
     line-height: 16px;
     padding: 0 6px 0 7px;
     border-left: 1px solid #ddd;
 }
-#jgCategoryOfGoods .jgOuterBox div.hover .details a.typesOfGoods{
+
+#jgCategoryOfGoods .jgOuterBox div.hover .details a.typesOfGoods {
     color: green;
     font-weight: bold;
     padding-right: 10px;
     border: none;
 
 }
-#jgCategoryOfGoods .jgOuterBox div.hover .details img{
+
+#jgCategoryOfGoods .jgOuterBox div.hover .details img {
     width: 25px;
     height: 25px;
     vertical-align: middle;
 }
 
 /* 内容区的特殊存在-最底部 */
-#jgCategoryOfGoods .jgOuterBox li.special{
+#jgCategoryOfGoods .jgOuterBox li.special {
     height: 52px;
     line-height: 52px;
     text-indent: 9px;
 }
 
-#jgCategoryOfGoods .jgOuterBox li.special a.specTitle{
+#jgCategoryOfGoods .jgOuterBox li.special a.specTitle {
     color: #22990d;
     font-size: 14px;
 }
 
-#jgCategoryOfGoods .jgOuterBox li.special img.specLeft{
+#jgCategoryOfGoods .jgOuterBox li.special img.specLeft {
     width: 17px;
     vertical-align: sub;
     margin-right: 5px;
 }
 
-#jgCategoryOfGoods .jgOuterBox li.special i.specRight{
+#jgCategoryOfGoods .jgOuterBox li.special i.specRight {
     margin-left: 2px;
     width: 24px;
     background: #fb6003;
@@ -342,18 +361,18 @@ a {
     color: #fff;
 }
 
-#jgCategoryOfGoods .jgOuterBox div.specHover{
+#jgCategoryOfGoods .jgOuterBox div.specHover {
     position: absolute;
     top: 0px;
     left: 227px;
     z-index: 4;
     width: 760px;
     background: #fff;
-    padding: 10px 8px ;
+    padding: 10px 8px;
     display: none;
 }
 
-#jgCategoryOfGoods .jgOuterBox div.specHover .specImgs a{
+#jgCategoryOfGoods .jgOuterBox div.specHover .specImgs a {
     width: 360px;
     height: 172px;
     display: block;
@@ -362,12 +381,12 @@ a {
     margin: 5px;
 }
 
-#jgCategoryOfGoods .jgOuterBox div.specHover .specImgs a img{
+#jgCategoryOfGoods .jgOuterBox div.specHover .specImgs a img {
     width: 100%;
     height: 100%;
 }
 
-#jgCategoryOfGoods .jgOuterBox div.specHover .specImgs a span{
+#jgCategoryOfGoods .jgOuterBox div.specHover .specImgs a span {
     background: url(../img/jgTextbg3.png) no-repeat;
     background-size: cover;
     position: absolute;
@@ -382,7 +401,7 @@ a {
     text-indent: 28px;
 }
 
-#jgCategoryOfGoods .jgOuterBox div.specHover .specLink{
+#jgCategoryOfGoods .jgOuterBox div.specHover .specLink {
     display: block;
     width: 110px;
     height: 24px;
@@ -390,14 +409,14 @@ a {
     margin: 0 auto 10px;
 }
 
-#jgCategoryOfGoods .jgOuterBox li.special:hover  div.specHover{
+#jgCategoryOfGoods .jgOuterBox li.special:hover div.specHover {
     display: block;
 }
 
 
 
 /* 顶部详情页区域 */
-#jgDetailPages{
+#jgDetailPages {
     width: 970px;
     height: 34px;
     position: absolute;
@@ -405,11 +424,13 @@ a {
     left: 228px;
     background: #fff;
 }
-#jgDetailPages nav{
+
+#jgDetailPages nav {
     height: 34px;
-    
+
 }
-#jgDetailPages nav a{
+
+#jgDetailPages nav a {
     float: left;
     height: 100%;
     padding: 0 20px;
@@ -418,7 +439,8 @@ a {
     color: #000;
     font-weight: 700;
 }
-#jgDetailPages nav a i{
+
+#jgDetailPages nav a i {
     display: inline-block;
     width: 13px;
     height: 17px;
@@ -426,13 +448,16 @@ a {
     vertical-align: sub;
     margin-right: 6px;
 }
-#jgDetailPages nav a.detailSpec{
+
+#jgDetailPages nav a.detailSpec {
     padding-left: 25px;
 }
-#jgDetailPages nav a:hover{
+
+#jgDetailPages nav a:hover {
     color: #409b49;
 }
-#jgDetailPages nav a:hover > i{
+
+#jgDetailPages nav a:hover>i {
     transform: rotate(360deg);
     transition: transform .2s ease-in;
 }
@@ -447,32 +472,35 @@ a {
     position: absolute;
     top: 32px;
     left: 228px;
-} 
-#jgSwiper .swiper-container img{
-    height: 100%;
-    
 }
-#jgSwiper .swiper-container .my-bullet{
-    width:21px;
-    height:21px;
+
+#jgSwiper .swiper-container img {
+    height: 100%;
+
+}
+
+#jgSwiper .swiper-container .my-bullet {
+    width: 21px;
+    height: 21px;
     border-radius: 50%;
     display: inline-block;
     margin-right: 5px;
-    background:#999;
-    opacity:1;
+    background: #999;
+    opacity: 1;
     line-height: 20px;
     text-align: center;
     color: #fff;
     cursor: pointer;
 }
-#jgSwiper .swiper-container .my-bullet-active{
+
+#jgSwiper .swiper-container .my-bullet-active {
     background: #fff;
     color: #000;
 }
 
 
 /* 右侧区域 */
-#jgAside{
+#jgAside {
     width: 200px;
     height: 360px;
     background: #fff;
@@ -481,12 +509,14 @@ a {
     right: 2px;
     overflow: hidden;
 }
+
 #jgAside a {
     display: block;
     border-bottom: 1px dotted #ddd;
     transition: all .4s ease-out;
 }
-#jgAside a:hover{
+
+#jgAside a:hover {
     transition: all .4s ease-out;
     transform: translate(-12px);
 }

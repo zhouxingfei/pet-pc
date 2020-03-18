@@ -1,0 +1,122 @@
+.ph-headerTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+#teMaiImg {
+  height: 500px;
+  position: relative;
+}
+#teMaiImg a.mainImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -960px;
+}
+#teMaiImg .navWrap {
+  width: 100%;
+  height: 73px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+}
+#teMaiImg .navWrap nav {
+  width: 1200px;
+  height: 73px;
+  margin: 0 auto;
+}
+#teMaiImg .navWrap nav a {
+  display: block;
+  width: 300px;
+  height: 73px;
+  float: left;
+  padding: 15px 0 ;
+  box-sizing: border-box;
+  color: #000;
+  position: relative;
+}
+#teMaiImg .navWrap nav a div {
+  /* width: 161px; */
+  height: 47px;
+  display: block;
+  margin-left: 68px;
+}
+#teMaiImg .navWrap nav a i {
+  width: 40px;
+  height: 47px;
+  float: left;
+}
+#teMaiImg .navWrap nav a p {
+  /* float: left; */
+}
+#teMaiImg .navWrap nav a p.menuTitle {
+  font-size: 18px;
+}
+#teMaiImg .navWrap nav a p.introduce {
+  font-size: 12px;
+  color: #666;
+  margin-top: 3px;
+}
+#teMaiImg .navWrap nav a span {
+  width: 1px;
+  height: 40px;
+  background: #c8c8c8;
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 20px;
+}
+#teMaiImg .navWrap nav a.active {
+  border-bottom: 3px solid #c8c8c8;
+}
+#teMaiImg .navWrap nav a:hover {
+  background: #c8c8c8;
+}
+ul#teMaiWrap {
+  width: 1200px;
+  margin: 0 auto 50px;
+}
+ul#teMaiWrap li {
+  margin-top: 50px;
+}
+ul#teMaiWrap li div.scale-title {
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+}
+ul#teMaiWrap li nav {
+  width: 1020px;
+  margin: 0 auto;
+}
+ul#teMaiWrap li nav a {
+  margin: 0 0 10px;
+  width: 500px;
+  position: relative;
+  display: inline-block;
+}
+ul#teMaiWrap li nav a img {
+  width: 500px;
+}
+ul#teMaiWrap li nav a p {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  width: 85px;
+  height: 25px;
+  background: url(../img/teMai_倒计时背景图.png) no-repeat left top / 100% 100%;
+  text-indent: 22px;
+  line-height: 25px;
+  color: #fff;
+  font-size: 12px;
+}
+ul#teMaiWrap li nav span {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+}
