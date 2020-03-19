@@ -67,7 +67,6 @@ let bagL=$('#box').offset().left-$('#bagBox').width();
 //鼠标窗口发生变化时触发事件时触发事件
 let timer=null;
 window.onresize=function(){
-    console.log(11);
     timer=setInterval(reduce,2)
     $('#box').offset();
     //获取登录框的left top
@@ -125,52 +124,47 @@ window.onresize=function(){
 };
 //回到顶部
 let jk=document.getElementById('six')
-
 let imgs=document.createElement('img');
 let winH = utils.win('clientHeight');
 jk.onclick=function(){
     let winT=utils.win('scrollTop',0);//100
 }
-//   window.onscroll = function(){
-//       let winT = utils.win('scrollTop');
-//       box.style.top=winT+'px'
-//       if(winT>=winH){
-//           jk.style.opacity ="1";
-//       }
-//       else {
-//           jk.style.opacity = 0;
-//       }
-//   }
-  
-// //移动到div上的img的时候，更换图片
 let childs;
+let getId;
+let childss;
 let oneDiv=document.getElementById('oneDiv');
+$('#box #oneDiv ul').hover(function(){
+        $('#towbagBox')[0].style.opacity='0';
+        $('#bagBox')[0].style.display='block'; 
+        $('#box #oneDiv #getId').addClass('context');
+    
+},function(){
+})
 $('#box div').hover(function(){
-
     childs=$(this).attr('id');
+    childss=$(this).children().attr('id');
     if(childs=='oneDiv'){
-        $('#bagBox')[0].style.opacity='1';
+        $('#textBox')[0].style.display='none';
+        $('#towbagBox')[0].style.opacity='0';
     }
     if(childs=='towDiv'){
+        $('#textBox')[0].style.display='none';
         $('#towbagBox')[0].style.opacity='1';
+        $('#bagBox')[0].style.display='none';
     }
-    $(this).children().addClass('context');
-    $(this).addClass('Div');
+    if(childs=='threeDiv'){
+        $('#textBox')[0].style.display='none';
+        $('#towbagBox')[0].style.opacity='0';
+    }
     
+    $(this).addClass('Div');
     $(this).children().children().addClass('context')
     $(this).children().children().nextAll().addClass('context')
-    // console.log($(this).child('ul'));
+
 },function(){
     childs=$(this).attr('id');
-    // childss=$(this).children().attr('id');
-    // console.log(childss);
-    
-    // if(childs=='textBox'){
-    //     $('#textBox')[0].style.opacity='0';
-    // }
-    // childs=$(this).attr('id');
     if(childs=='bagBox'){
-        $('#bagBox')[0].style.opacity='0';
+        $('#bagBox')[0].style.display='none';
     }
     if(childs=='towbagBox'){
         $('#towbagBox')[0].style.opacity='0';
@@ -181,53 +175,56 @@ $('#box div').hover(function(){
     $(this).children().children().removeClass('context')
     $(this).children().children().nextAll().removeClass('context')
 })
-//调取forDiv
-$('#box #fourDiv ul').hover(function(){
-    $(this).addClass('anim')
-},function(){
-    $(this).removeClass('anim')
-})
 // 写第一个登录的标签框
 let num;
-$('#box #fourDiv ul').hover(function(){1
+$('#box #fourDiv ul').hover(function(){
+    $(this).addClass('anim')
    num=$(this).index();
    switch (num) {
        case 0:
-           $('#textBox')[0].style.opacity='1';
+           $('#textBox')[0].style.display='block';
+           $('#xBox')[0].style.display='none';
            break;
        case 1:
-           $('#xBox')[0].style.opacity='1';
+           $('#xBox')[0].style.display='block';
+           $('#textBox')[0].style.display='none';
+           $('#weixinBox')[0].style.display='none';
            break;
        case 2:
-           $('#weixinBox')[0].style.opacity='1';
+           $('#weixinBox')[0].style.display='block';
+           $('#xBox')[0].style.display='none';
+           $('#weiboBox')[0].style.display='none';
            break;
        case 3:
-           $('#weiboBox')[0].style.opacity='1';
+           $('#weiboBox')[0].style.display='block';
+           $('#weixinBox')[0].style.display='none';
            break;
        case 4:
-           $('#topBox')[0].style.opacity='1';
+           $('#topBox')[0].style.display='block';
+           $('#weiboBox')[0].style.display='none';
            break;
    }
-   
 },function(){
+    $(this).removeClass('anim')
     $(this).removeClass('textbagBox')
     let index=$(this).index();
     switch (index) {
-        case 0:
-            $('#textBox')[0].style.opacity='0';
-            break;
-        case 1:
-            $('#xBox')[0].style.opacity='0';
-            break;
-        case 2:
-            $('#weixinBox')[0].style.opacity='0';
-            break;
-        case 3:
-            $('#weiboBox')[0].style.opacity='0';
-            break;
+      
         case 4:
-            $('#topBox')[0].style.opacity='0';
+            $('#topBox')[0].style.display='none';
             break;
     }
+})
+$('#textBox').hover(function(){},function(){
+    $('#textBox')[0].style.display='none';
+})
+$('#xBox').hover(function(){},function(){
+    $('#xBox')[0].style.display='none';
+})
+$('#weixinBox').hover(function(){},function(){
+    $('#weixinBox')[0].style.display='none';
+})
+$('#weiboBox').hover(function(){},function(){
+    $('#weiboBox')[0].style.display='none';
 })
 })()
