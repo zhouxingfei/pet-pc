@@ -1,0 +1,738 @@
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+ul{
+list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.pet-onav {
+  margin: 10px 0;
+  width: 1200px;
+}
+.onav-cont {
+  border: 1px solid #ddd;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 0 25px 0 8px;
+  background: #fff;
+}
+.onav-cont span {
+  display: inline-block;
+  padding: 0 10px;
+  min-width: 50px;
+  cursor: pointer;
+}
+.onav-cont b {
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  background: url(https://static.epetbar.com/static_web/pc/dist/images/background/bg2.png) -38px -1258px;
+  right: 15px;
+  top: 10px;
+}
+.onav-cont ul {
+  position: absolute;
+  top: 24px;
+  left: -1px;
+  width: 100%;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 5px 0;
+  display: none;
+  z-index: 150;
+}
+.active ul {
+  display: block;
+ 
+}
+.onav-cont li {
+  line-height: 22px;
+  height: 22px;
+  overflow: hidden;
+  text-indent: 18px;
+  border-bottom: 1px dashed #eee;
+}
+.onav-cont li a {
+  color: #666;
+  display: block;
+}
+.pet-onav label {
+  display: inline-block;
+  background: url(https://static.epetbar.com/static_web/pc/dist/images/background/bg2.png) -38px -1265px;
+  width: 5px;
+  height: 9px;
+  margin: 0 10px;
+}
+/* 狗狗选项 */
+/* 狗狗放大镜 */
+
+#content{
+  width: 95%;
+  height: 600px;
+  /* background-color: aqua; */
+  margin: 0 auto;
+  display: flex;
+
+}
+#content-left{
+  width: 500px;
+  /* background-color: bisque; */
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+#content-left-top{
+width: 300px;
+height: 300px;
+margin: 0 auto;
+background-color: yellow;
+}
+/* 放大镜中间选项卡 */
+#content-left-center{
+  width: 389px;
+  height: 84px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-left: 70px;
+}
+
+
+
+#content-left-center .back {
+  width: 17px;
+  height: 72px;
+  cursor: pointer;
+  border: 1px solid #e4e4e4;
+  float: left;
+  position: relative;
+}
+#content-left-center .next {
+  width: 17px;
+  height: 72px;
+  cursor: pointer;
+  border: 1px solid #e4e4e4;
+  float: left;
+  position: relative;
+}
+
+#content-left-center div ul {
+  height: 74px;
+  left: 0px;
+  /* width: 5000px; */
+  position: relative;
+  top: 0px;
+  overflow: hidden;
+}
+#content-left-center div ul li {
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin: 0 5px;
+  border: #ddd solid 1px;
+  padding: 1px;
+  overflow: hidden;
+}
+#content-left-center div ul li img{
+  max-width: 70px;
+  max-height: 70px;
+  _width: 70px;
+  display: inline;
+  line-height: 66px;
+}
+/* 放大镜左下 */
+#content-left-end{
+  text-align: center;
+  margin-top: 10px;
+}
+/* 放大镜右边 */
+#content-right{
+  flex: 1;
+  background-color: blue;
+}
+
+.body {
+  min-width: 1200px;
+  background-color: #F5F5F5;
+  margin: 0 auto;
+}
+
+.pet-onav {
+  margin: 10px auto;
+  height: 24px;
+  line-height: 24px;
+}
+.pet-onav .onav-cont {
+  border: 1px solid #DDDDDD;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  display: inline-block;
+  padding: 0 25px 0 8px;
+  background: #fff;
+}
+.pet-onav .onav-cont .gnum {
+  color: #999;
+  padding-left: 5px;
+  font-style: normal;
+}
+.pet-onav .onav-cont b {
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  font-style: normal;
+  background: url(../img/bg2.png) no-repeat -38px -1258px;
+  right: 8px;
+  top: 10px;
+}
+.pet-onav label {
+  background: url(../img/bg2.png) no-repeat -38px -1265px;
+  width: 5px;
+  height: 9px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.goods-md-bg {
+  background: #fff;
+  min-height: 550px;
+}
+
+.rw400 {
+  width: 450px;
+  margin-top: 60px;
+}
+
+.prelative {
+  position: relative;
+}
+
+.xqico {
+  background: url(../img/detail/xqico.png) no-repeat;
+}
+
+.gdms .goodslogo {
+  width: 450px;
+  height: 300px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.gdms .goodslogo .cloud-zoom-wrap a {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+.gdms .goodslogo .cloud-zoom-wrap a img {
+  max-width: 450px;
+  max-height: 300px;
+}
+.gdms .picroll {
+  width: 389px;
+  height: 84px;
+  overflow: hidden;
+  margin: 0 auto 20px;
+}
+.gdms .picroll p.back, .gdms .picroll p.next {
+  width: 17px;
+  height: 72px;
+  cursor: pointer;
+  border: 1px solid #e4e4e4;
+  float: left;
+  position: relative;
+}
+.gdms .picroll p i {
+  border-style: solid solid solid dotted;
+  border-color: transparent #d7d7d7 transparent transparent;
+  border-width: 8px;
+  font-size: 0;
+  position: absolute;
+  left: -5px;
+  bottom: 28px;
+  margin: 0;
+  padding: 0;
+}
+.gdms .picroll p.next i {
+  border-style: solid dotted solid solid;
+  border-color: transparent transparent transparent #d7d7d7;
+  left: 5px;
+}
+.gdms .picroll div {
+  width: 341px;
+  height: 74px;
+  overflow: hidden;
+  float: left;
+  margin: 0 5px;
+  position: relative;
+}
+.gdms .picroll div ul {
+  height: 74px;
+  left: 0px;
+  width: 50000px;
+  position: absolute;
+  top: 0px;
+}
+.gdms .picroll div ul li {
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin: 0 5px;
+  border: #ddd solid 1px;
+  padding: 1px;
+  overflow: hidden;
+}
+.gdms .picroll div ul li a {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+.gdms .picroll div ul li a img {
+  max-width: 70px;
+  max-height: 70px;
+  display: inline;
+}
+.gdms .xq-share.dib {
+  display: inline-block;
+}
+.gdms .xq-share .span1 {
+  background-position: -9px -329px;
+  padding-left: 15px;
+}
+.gdms .xq-share .span2 {
+  background-position: -9px -361px;
+  padding-left: 15px;
+}
+.gdms .xq-share .share-icon a {
+  color: #444;
+}
+.gdms .xq-share .share-icon .share-div {
+  display: none;
+  position: absolute;
+  padding-top: 10px;
+  margin-left: 2px;
+}
+.gdms .xq-share .share-icon .share-div .jiathis a {
+  color: #444;
+}
+.gdms .xq-share .share-icon .share-div .jiathis a .txt {
+  float: left;
+  font-size: 12px;
+  line-height: 18px;
+}
+.gdms .xq-share .share-icon .share-div .jiathis a .jtico {
+  text-align: left;
+  overflow: hidden;
+  display: block;
+  height: 16px;
+  line-height: 16px;
+  padding-left: 20px;
+  background: url(../img/detail/jiathis_ico.png) no-repeat left;
+  cursor: pointer;
+}
+.gdms .xq-share .share-icon .share-div .jiathis a .weixin {
+  background-position: 0 -1809px;
+}
+.gdms .xq-share .share-icon .share-div .jiathis a .qzone {
+  background-position: 0 -64px;
+}
+.gdms .xq-share .share-icon .share-div .jiathis a .sina {
+  background-position: 0 -96px;
+}
+.gdms .xq-share .share-icon .share-div .jiathis a .qq {
+  background-position: 0 -2017px;
+}
+.gdms .xq-share .share-icon .share-div .jiathis a .douban {
+  background-position: 0 -1408px;
+}
+
+.gddes {
+  width: 667px;
+  padding: 40px;
+  margin: 0 0 0 3px;
+  background: #fcfcfc;
+}
+.gddes .gdtitle .cred {
+  color: #FF0000;
+}
+.gddes .epet-pprice {
+  background: url(../img/detail/price-bg.jpg) no-repeat;
+  height: 70px;
+}
+.gddes .epet-pprice del {
+  text-decoration: line-through;
+}
+.gddes .gdtable {
+  border-bottom: 1px dashed #d1d1d1;
+}
+.gddes .gdtable .ats-style {
+  float: left;
+  width: 250px;
+  height: 25px;
+  line-height: 25px;
+  overflow: hidden;
+  border: 1px #fbfbfb solid;
+  text-decoration: none;
+}
+.gddes .gdtable .gdicos span {
+  background: #FFA200;
+  border-radius: -3px;
+  padding: 2px;
+}
+.gddes .gdtable .div-sentcity {
+  border: 0;
+  padding: 0;
+}
+.gddes .sent-city {
+  border-bottom: 1px dashed #d7d7d7;
+  padding: 5px 0;
+  border: none;
+}
+.gddes .goods-place-div {
+  padding: 5px 15px 5px 5px;
+  line-height: 20px;
+  width: auto;
+  min-width: 50px;
+}
+.gddes .goods-place-div .place-div .place-show .place-str {
+  border: 1px solid #ddd;
+  padding: 5px 15px 5px 5px;
+  line-height: 20px;
+  width: auto;
+  cursor: pointer;
+}
+.gddes .goods-place-div .place-div .place-show b {
+  background: url(../img/detail/xqico.png) 0px -31px no-repeat;
+  display: block;
+  top: 11px;
+  right: 5px;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+}
+.gddes .goods-place-div .place-hide {
+  margin-top: -2px;
+  position: absolute;
+  z-index: 10000;
+  top: 33px;
+  left: 0;
+  background: transparent;
+  line-height: 15px;
+  min-height: 270px;
+}
+.gddes .goods-place-div .place-hide .citys {
+  width: 370px;
+  display: inline-block;
+  border: 1px solid #ddd;
+  padding: 5px 5px 15px 5px;
+  position: relative;
+}
+.gddes .goods-place-div .place-hide .citys .place-header {
+  width: 100%;
+  height: 25px;
+  display: inline-block;
+  border-bottom: 1px solid #ddd;
+  padding: 0;
+  margin: 0;
+}
+.gddes .goods-place-div .place-hide .citys .place-header li {
+  background: #F6F6F6;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  display: inline-block;
+  line-height: 24px;
+  font-size: 12px;
+  color: #888;
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+}
+.gddes .goods-place-div .hide {
+  display: none;
+}
+.gddes .norms .norms-con {
+  width: 589px;
+  margin-left: 5px;
+}
+.gddes .norms .norms-con .cgnum {
+  display: inline-block;
+  border: #b2b2b2 solid 1px;
+}
+.gddes .norms .norms-con .chgnum {
+  ursor: pointer;
+  height: 32px;
+  line-height: 32px;
+  overflow: hidden;
+  width: 15px;
+  display: block;
+  float: left;
+  border: #fff solid 1px;
+  background: #f3f3f3;
+  text-align: center;
+}
+.gddes .norms .norms-con .buynum {
+  font-size: 12px;
+  width: 50px;
+  height: 32px;
+  float: left;
+  text-align: center;
+  border: #f3f3f3 solid 1px;
+  background: #fff;
+}
+.gddes .norms .norms-con .norms-a {
+  display: inline-block;
+  border: 1px #ccc solid;
+  padding: 0 10px;
+  line-height: 12px;
+  outline: none;
+  color: #333;
+  text-decoration: none;
+  height: 24px;
+  line-height: 24px;
+  background: #fff;
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  margin: 0px 5px 5px 0px;
+}
+.gddes .norms .cs-chks input {
+  vertical-align: middle;
+}
+.gddes .norms .cs-chks label {
+  cursor: pointer;
+  margin-right: 10px;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+.gddes .norms .price {
+  font-weight: bold;
+  color: #FF6600;
+}
+.gddes .addcart-div {
+  width: 190px;
+  height: 56px;
+}
+.gddes .addcart-div a {
+  width: 100%;
+  height: 100%;
+  line-height: 56px;
+  border-radius: 3px;
+  background: #78b300;
+}
+.gddes .advice .xqico {
+  background: url(../img/detail/xqico.png) no-repeat -9px -387px;
+}
+.gddes .advice i {
+  width: 30px;
+  height: 30px;
+}
+
+.clear {
+  clear: both;
+}
+
+.box {
+  height: 100%;
+  border: 1px solid #DDDDDD;
+  background-color: #FFF;
+  overflow: hidden;
+}
+.box h2 {
+  height: 30px;
+  line-height: 30px;
+  background-color: #FFF;
+  border-bottom: 2px solid #ac92ec;
+}
+.box h2 span {
+  display: block;
+  float: left;
+  padding-left: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+}
+.box .mglist {
+  width: 192px;
+  padding: 10px 8px;
+  border-bottom: 1px dashed #e3e3e3;
+  height: auto;
+  overflow: hidden;
+}
+.box .mglist li {
+  float: left;
+}
+.box .mglist li.gimg {
+  width: 55px;
+  height: 55px;
+  padding: 0 5px;
+  line-height: 55px;
+}
+.box .mglist li.gtitle {
+  width: 115px;
+  line-height: 16px;
+  float: left;
+}
+.box .mglist li.gtitle a {
+  color: #444;
+}
+.box .mglist li.gtitle .price {
+  font-weight: bold;
+  color: #FF6600;
+}
+
+.tabs {
+  background: url(../img/detail/goods/ln.gif) bottom repeat-x;
+}
+.tabs a {
+  background: #F5F5F5;
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 15px;
+  border: 1px #ddd solid;
+  cursor: pointer;
+}
+.tabs a.hov {
+  background-color: #fff;
+  border-top: 2px solid #85bc56;
+  border-bottom: 1px solid #fff;
+}
+.tabs a.genuine {
+  border: none;
+  margin: 0;
+  padding: 0;
+  height: 38px;
+  line-height: 38px;
+  background: #fff;
+  float: right;
+  bottom: 1px;
+  right: 0;
+}
+.tabs a.genuine ul li {
+  width: 150px;
+  height: 38px;
+  line-height: 38px;
+}
+.tabs a.genuine ul li i {
+  width: 34px;
+  height: 38px;
+  font-size: 0;
+  margin-top: -1px;
+}
+.tabs a.genuine ul li i.ico4 {
+  background-position: -8px -482px;
+  background-color: #9f83e7;
+}
+.tabs a.genuine ul li span {
+  height: 38px;
+  width: 115px;
+  background: #fff;
+  border-radius: 0;
+  border-color: #d7d7d7;
+  line-height: 36px;
+  border: 1px solid #e7e7e7;
+  border-left: 0;
+  margin-top: -2px;
+}
+
+.con-xiangqing, .shouquan {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  font-size: 0;
+}
+.con-xiangqing img, .shouquan img {
+  display: inline;
+}
+
+.con-pingjia dl {
+  margin-bottom: 30px;
+}
+.con-pingjia dl dt {
+  margin-right: 20px;
+  width: 50px;
+}
+.con-pingjia dl dd {
+  width: 870px;
+  background: #EDEDED;
+}
+.con-pingjia dl dd .d-con {
+  padding: 0 30px 20px;
+}
+.con-pingjia dl dd .d-con .p-detail {
+  padding: 15px 0 16px;
+  height: 20px;
+  line-height: 20px;
+  background: url(../img/detail/line.gif) repeat-x left bottom;
+}
+.con-pingjia dl dd .d-con .p-detail .star {
+  color: #ea3b38;
+  font-size: 14px;
+  height: 14px;
+  line-height: 14px;
+  padding-top: 3px;
+}
+.con-pingjia dl dd .d-con .p-detail .star span {
+  background: url(../img/detail/star_x.png);
+  width: 84px;
+  height: 14px;
+  display: inline-block;
+  background-position: 0 -24px;
+  vertical-align: top;
+  margin-right: 5px;
+}
+.con-pingjia dl dd .d-con .p-detail .star span em {
+  background: url(../img/detail/star_x.png);
+  width: 100%;
+  height: 14px;
+  display: inline-block;
+  background-position: 0 0px;
+  vertical-align: top;
+  margin-right: 5px;
+}
+.con-pingjia dl dd .d-con .d_cont {
+  padding: 14px 0 16px;
+  line-height: 22px;
+  color: #333;
+  word-break: break-all;
+}
+.con-pingjia dl dd .d-con .p_photos {
+  margin: 0 0 3px;
+}
+.con-pingjia dl dd .d-con .p_photos i {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background: url(../img/detail/pl_icon2.png) left bottom no-repeat;
+  vertical-align: top;
+}
+.con-pingjia .comment_page {
+  margin-top: 30px;
+  text-align: right;
+}
+.con-pingjia .comment_page a {
+  border: 1px solid #cccccc;
+  height: 23px;
+  line-height: 21px;
+  line-height: 24px\0;
+  padding: 0px 7px;
+  margin-left: 5px;
+  display: inline-block;
+  color: #cccccc;
+  font-family: "瀹嬩綋";
+}
+.con-pingjia .comment_page a.on {
+  border: 1px solid #7e68b3;
+  background-color: #7e68b3;
+  color: #fff;
+  font-weight: bold;
+}

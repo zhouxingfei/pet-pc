@@ -1,6 +1,10 @@
 .footer-wrapper {
     background: #f5f5f5;
 }
+.footer-wrapper img{
+    display: inline-block;
+}
+
 .section {
     width: 1200px;
     margin: 0 auto;
