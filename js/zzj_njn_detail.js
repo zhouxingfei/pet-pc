@@ -1,6 +1,7 @@
 $("#main-footer").load('footer.html', function () {
     $.getScript('./js/footer.js')
 })
+$("#head").load('head.html')
 
 
 
