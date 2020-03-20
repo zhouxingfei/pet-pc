@@ -7,10 +7,9 @@ let fzx = (function(){
        
         //lis = Array.from(lis);
         for(let i = 0;i< lis.length;i++){
-            console.dir(cards[i]);
+            
             lis[i].index = i;
             lis[i].onmouseover = function(){
-                console.log(i);
                 for(let j = 0;j<lis.length;j++){
                     lis[j].className = '';
                     cards[j].style.display = 'none';

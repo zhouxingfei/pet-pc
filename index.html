@@ -43,7 +43,7 @@
             <p style="color: white; font-size: 10px;"> 回到顶部</p>
         </div>
         <div id="oneDiv">   
-            <ul></ul>
+            <ul id="getId"></ul>
         </div>
         <div id="towDiv"  >
             <ul>
@@ -1319,7 +1319,6 @@
             },
             on: {
                 slideChange: function () {
-                    console.log(this.activeIndex)
                     // 轮播图更换同时更换背景
                     let jgBGBox = document.getElementById('jgBGBox');
                     let pagination = document.getElementsByClassName('my-bullet-active')[0];
