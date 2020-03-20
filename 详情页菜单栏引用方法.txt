@@ -1,0 +1,5 @@
+你们看着引吧，可以直接copy，也可以用js引（这个方法参加尾部的引用方式）。
+
+HTML是menu.html
+CSS是JG_index.css（头部也有些CSS样式，别忘记了）
+JS是，JS你们根本用不到，不用引。

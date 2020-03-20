@@ -11,12 +11,16 @@
         jgChoosePet.style.display = 'block';
         jgOuterBox.style.display = 'none';
         jgDogOrCat.style.background = 'transparent';
+        jgDogOrCat.style.color = '#fff';
+        jgCategoryOfGoods.style.color = '#000';
         jgCategoryOfGoods.style.background = '#fff';
     }
     jgCategoryOfGoods.onmouseenter= function(){
         jgOuterBox.style.display = 'block';
         jgChoosePet.style.display = 'none';
         jgCategoryOfGoods.style.background = 'transparent';
+        jgCategoryOfGoods.style.color = '#fff';
+        jgDogOrCat.style.color = '#000';
         jgDogOrCat.style.background = '#fff';
     }
 
@@ -46,9 +50,9 @@
 
 
     // 轮播图更换同时更换背景
-    let jgBGBox = document.getElementById('jgBGBox');
+   /*  let jgBGBox = document.getElementById('jgBGBox');
     let pagination = document.getElementsByClassName('my-bullet-active')[0];
-    let jgColorAry = ['rgb(79,201,242)' , 'rgb(21, 21, 21)' , 'rgb(66, 98, 65)' , 'rgb(69,118,158)' , 'rgb(208,184,156)'];  // 从这个数组里拿取对应的颜色放入背景色属性中
+    let jgColorAry = ['rgb(79,201,242)' , 'rgb(21, 21, 21)' , 'rgb(66, 98, 65)' , 'rgb(69,118,158)' , 'rgb(208,184,156)'];  // 从这个数组里拿取对应的颜色放入背景色属性中 */
 
 
     // jgBGBox.style.background = jgColorAry[0];
