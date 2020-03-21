@@ -3,15 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <title>清仓特价</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/reset.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-   
     
     <link rel="stylesheet" href="css/qctj.css">
     <link rel="stylesheet" href="css/head.css">
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="./css/index-zzy.css">
+    <style>
+        a:hover{
+            color: #248DCC;
+        }
+    </style>
 </head>
 <body>
+    <!-- zzy侧边 -->
+
+	<div id="rightFixed">
+		<ul id="rightUl">
+			<li class="fixed01">
+				<a class="rightClick rightA" href="javascript:;"></a>
+				<div class="rightHover">
+					您还没有登录，请先<a href="./login.html">登录</a>
+				</div>
+			</li>
+			<li class="fixed02">
+				<a class="rightA" href="javascript:;">
+					<span class="rightClick"></span>
+					<div class="rightText">
+						购物车<span>0</span>
+					</div>
+				</a>
+				<div class="rightHover" style="font-size: 14px; font-weight: bold;">您的购物车中暂无商品，赶快选择心爱的商品吧！</div>
+			</li>
+			<li class="fixed03">
+				<a class="rightA" href="javascript:;">
+					<span class="rightClick"></span>
+					<div class="rightText">
+						在线客服<span>0</span>
+					</div>
+				</a>
+			</li>
+			<li class="fixed04">
+				<a class="rightClick rightA" href="javascript:;"></a>
+				<div class="rightHover">
+					您还没有登录，请先<a href="./login.html">登录</a>
+				</div>
+			</li>
+			<li class="fixed05">
+				<a class="rightClick rightA" href="javascript:;"></a>
+				<div class="rightHover" style="top: -50%;margin-top: -50px;">
+					<a href="./login.html">登录</a>后可显示收藏
+				</div>
+			</li>
+			<li class="fixed06">
+				<a class="rightClick rightA" href="javascript:;"></a>
+				<div class="rightHover" style="padding: 0;border: none;">
+					<img src="./img/手机扫码下载.png" alt="">
+				</div>
+			</li>
+			<li class="fixed07">
+				<a class="rightClick rightA" href="javascript:;"></a>
+				<div class="rightHover">
+					<img src="./img/官方微信.png" alt="">
+				</div>
+			</li>
+			<li class="fixed08">
+				<a class="rightClick rightA" href="javascript:;"></a>
+				<div class="rightHover">
+					<img src="./img/官方微博.jpg" alt="">
+				</div>
+			</li>
+			<li class="fixed09" id="clickToTop">
+				<a class="rightClick rightA" id="toTop" style="display: none;" href="javascript:;"></a>
+				<div class="rightHover" style="    background-color: #FFA200;height: 35px;
+				width: 90px;line-height: 35px;text-align: center;padding:0 10px;top: 0;">
+					回到顶部
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+    <!-- end -->
+
     <div id="head"></div>
     <div class="container">
         <!-- 最上面的那张大图片 -->
@@ -181,8 +255,10 @@
     </div>
     <div id="main-footer"></div>
 
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="../node_modules/jquery/dist/jquery.min.js"></script> -->
     <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/utils-zzy.js"></script>
+    <script src="./js/index-zzy.js"></script>
     <script src="js/qctj.js"></script>
 </body>
 </html>

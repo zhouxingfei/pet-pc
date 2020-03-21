@@ -1,321 +1,142 @@
-
-/* 右边的样式 */
-#box{
-    width: 40px;
-    background: rgb(68, 68, 68);
+/* 整个固定子屏幕最右侧 */
+#rightFixed{
     position: fixed;
-    overflow: hidden;
     right: 0;
-    z-index: 1000;
+    top: 0;
+    z-index: 9999;
+    width: 35px;
+    height: 100%;
+    background: #444;
+}
+#rightFixed ul#rightUl{
+    margin-top: 30px;
+    padding-top: 40px;
+}
+#rightFixed ul#rightUl li{
+    position: relative;
+}
+#rightFixed ul#rightUl li a{
+    display: inline-block;
+    color: #a6a6a6;
+}
+#rightFixed ul#rightUl li a .rightText{
+    width: 19px;
+    margin: 0 auto;
+    text-align: center;
+}
+#rightFixed ul#rightUl li a .rightText span{
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    background-color: #a6a6a6;
+    color: #444;
+}
+#rightFixed ul#rightUl li.fixed01{
+    margin-bottom: 10px;
+}
+#rightFixed ul#rightUl li.fixed02 , li.fixed03,li.fixed04{
+    margin-top:  20px;
+}
+#rightFixed ul#rightUl li .rightA{
+    padding: 5px 0 10px;
+    box-sizing: border-box;
+}
+#rightFixed ul#rightUl li.fixed01 div.rightHover,li.fixed02 div.rightHover,li.fixed04 div.rightHover,li.fixed05 div.rightHover{
+    position: absolute;
+    right: 35px;
+    top: 0;
+    padding: 70px 130px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    background: #fff;
+
+    display: none;
+}
+#rightFixed ul#rightUl li div.rightHover a{
+    color: red;
+}
+#rightFixed ul#rightUl li .rightClick{
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background: url(../img/bar_new.png);
+    background-position: 0 -235px;
+}
+/* 给每个区域分别设置背景图 */
+#rightFixed ul#rightUl li.fixed02 .rightClick{
+    background-position: 0 -270px;
+}
+#rightFixed ul#rightUl li.fixed03 .rightClick{
+    background-position: 2px -617px;
+}
+#rightFixed ul#rightUl li.fixed04 .rightClick{
+    background-position: 0 -305px;
+}
+#rightFixed ul#rightUl li.fixed05 .rightClick{
+    background-position: -1px -693px;
+}
+#rightFixed ul#rightUl li.fixed06 .rightClick{
+    background-position: 0 -410px;
+}
+#rightFixed ul#rightUl li.fixed07 .rightClick{
+    background-position: 0 -720px;
+}
+#rightFixed ul#rightUl li.fixed08 .rightClick{
+    background-position: 0 -753px;
+}
+#rightFixed ul#rightUl li.fixed09 .rightClick{
+    background-position: 0 -521px;
+}
+#rightFixed ul#rightUl li:hover  .rightClick{
+    background-image: url(../img/bar_newhover.png);
+}
+#rightFixed ul#rightUl li:hover .rightA{
+    background-color: #555;
+}
+#rightFixed ul#rightUl li#clickToTop:hover .rightA{
+    background-color: #444;
+}
+#rightFixed ul#rightUl li:hover .rightText{
+    color: #fff;
+}
+#rightFixed ul#rightUl li:hover .rightText span{
+    background: #fff;
+}
+#rightFixed ul#rightUl li:hover > div.rightHover{
     display: block;
 }
-#box div{
-    width: 40px;
-    height: 20%;
-    left: 100%;
-}
-/* 第一个图像的样式 */
-#box #oneDiv{
-    top: 40px;
-}
-#box #oneDiv ul{
-    background:url(../img/bar_new.png) no-repeat 1px -240px;
-    width: 800px;
-    height: 26px;
-    top: 60px;
-    position: relative;
-}
-#box #oneDiv ul.context{
-    background: url(../img/bar_newhover.png) no-repeat 1px -240px;
-    width: 40px;
-    height: 26px;
-    top: 60px;
-    position: relative;
-   background-color: rgb(100, 100, 100);
-   z-index: 1000;
-}
-/* 第二个图像的样式 */
-#box #towDiv{
-    height: 150px;
-}
-#box #towDiv ul{
-    margin-top: 15px;
+
+/* hover of down three */
+#rightFixed ul#rightUl li.fixed06 .rightHover{
     position: absolute;
+    bottom: -15px;
+    right: 28.5px;
+    display: none;
+    white-space: nowrap;
 }
-#box #towDiv.Div{
-    background-color: rgb(100, 100, 100);
-}
-#box #towDiv ul div{
-    background:url(../img/bar_new.png) no-repeat 3px -278px;
-    width: 40px;
-    height: 26px;
-    margin: 0px auto;
-}
-#box #towDiv ul p{
-    top: 130px;
-    text-align: center;
-    margin:0 auto;
-    width:20px;
-    line-height:24px;
-    font-size: 13px;
-    color: rgb(46, 43, 43);
-}
-#box #towDiv ul li{
-    list-style: none;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    text-align: center;
-    background: rgb(166, 166, 166);
-    line-height: 22px;
-    margin: 0px auto;
-}
-#box #towDiv ul div.context{
-    background: url(../img/bar_newhover.png) no-repeat 3px -278px;
-    width: 40px;
-    height: 26px;
-    margin: 0px auto;
-}
-#box #towDiv ul p.context{
-    top: 130px;
-    text-align: center;
-    margin:0 auto;
-    width:20px;
-    line-height:24px;
-    color: white;
-    font-size: 13px;
-
-}
-#box #towDiv ul li.context{
-    list-style: none;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    text-align: center;
-    background: white;
-    line-height: 22px;
-    margin: 0px auto;
-}
-
-/* 第三个div */
-#box #threeDiv{
-    height: 170px;
-}
-#box #threeDiv ul{
-    margin-top: 10px;
+#rightFixed ul#rightUl li.fixed07 .rightHover,li.fixed08 div.rightHover,li.fixed09 div.rightHover{
     position: absolute;
-}
-#box #threeDiv.Div{
-    background-color: rgb(100, 100, 100);
-}
-#box #threeDiv ul div{
-    background:url(../img/bar_new.png) no-repeat 5px -620px;
-    width: 40px;
-    height: 26px;
-    margin: 0px auto;
-    top: 150px;
-}
-#box #threeDiv ul p{
-    top: 130px;
-    text-align: center;
-    margin:0 auto;width:20px;line-height:24px;
-    font-size: 13px;
-    color: rgb(46, 43, 43);
-}
-#box #threeDiv ul div.context{
-    background:url(../img/bar_newhover.png) no-repeat 5px -620px;
-    width: 40px;
-    height: 26px;
-    margin: 0px auto;
-    top: 150px;
-}
-#box #threeDiv ul p.context{
-    top: 130px;
-    text-align: center;
-    margin:0 auto;width:20px;line-height:24px;
-    color: white;
-    font-size: 13px;
-    
-}
-#box #threeDiv ul li{
-    list-style: none;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    text-align: center;
-    background: rgb(166, 166, 166);
-    line-height: 22px;
-    margin: 0px auto;
-}
-#box #threeDiv ul li.context{
-    list-style: none;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    text-align: center;
-    background: white;
-    line-height: 22px;
-    margin: 0px auto;
-}
-
-/* 5个小图标 */
-#box #fourDiv ul{
-    
-    position: relative;
-}
-#box #fourDiv ul:nth-child(1){
-    background:url(../img/bar_new.png) no-repeat 3px -310px;
-    width: 40px;
-    height: 26px;
-    margin: 0px auto;
-}
-#box #fourDiv ul.anim:nth-child(1){
-    background:url(../img/bar_newhover.png) no-repeat 3px -310px;
-    width: 40px;
-    height: 26px;
-    margin: 0px auto;
-    background-color: rgb(100, 100, 100);
-}
-#box ul:nth-child(2){
-    background:url(../img/bar_new.png) no-repeat 3px -420px;
-    width: 40px;
-    height: 26px;
-    margin: 0px auto;
-}
-#box ul.anim:nth-child(2){
-    background:url(../img/bar_newhover.png) no-repeat 3px -420px;
-    width: 40px;
-    height: 26px;
-    margin: 0px auto;
-    background-color: rgb(100, 100, 100);
-    
-}
-#box ul:nth-child(3){
-    background:url(../img/bar_new.png) no-repeat 3px -725px;
-    width: 40px;
-    height: 26px;
-    margin: 0px auto;
-}
-#box ul.anim:nth-child(3){
-    background:url(../img/bar_newhover.png) no-repeat 3px -725px;
-    width: 40px;
-    height: 26px;
-    margin: 0px auto;
-    background-color: rgb(100, 100, 100);
-}
-#box ul:nth-child(4){
-    background:url(../img/bar_new.png) no-repeat 3px -760px;
-    width: 40px;
-    height: 26px;
-    margin: 0px auto;
-}
-#box ul.anim:nth-child(4){
-    background:url(../img/bar_newhover.png) no-repeat 3px -760px;
-    width: 40px;
-    height: 26px;
-    margin: 0px auto;
-    background-color: rgb(100, 100, 100);
-}
-#box #fourDiv #six:nth-child(5){
-    background:url(../img/bar_new.png) no-repeat 3px -525px;
-    width: 40px;
-    height: 26px;
-    margin: 0px auto;
-    opacity: 1;
-}
-#box #fourDiv #six.anim:nth-child(5){
-    background:url(../img/bar_new.png) no-repeat 3px -525px;
-    width: 40px;
-    height: 26px;
-    margin: 0px auto;
-    background-color: rgb(100, 100, 100);
-}
-/* 登录边框的div */
-#box #bagBox{
-    border: 1px solid slategray;
-    width: 200px;
-    background:white;
-    position: relative;
-    text-align: center;
-    position: fixed;
-    font-size: 10px;
-    line-height: 100px;
+    bottom: -15px;
+    right: 35px;
     display: none;
-    z-index: 1000;
-    float: right;
+    padding: 10px;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+    background: #fff;
 }
-/* 购物车的div */
-#box #towbagBox{
-    border: 1px solid slategray;
-    width: 400px;
-    position: relative;
-    background:white;
-    text-align: center;
-    position: fixed;
-    font-size: 10px;
-    height: 150px;
-    line-height: 100px;
-    display: none;
-    z-index: 100;
-    float: right;
-}
-#box #textBox{
-    border: 1px solid slategray;
-    width: 200px;
-    position: relative;
-    background:white;
-    text-align: center;
-    position: fixed;
-    font-size: 10px;
-    line-height: 100px;
-    display: none;
-    z-index: 1000;
-    float: right;
-}
-#box #xBox{
-    box-shadow:-3px -3px -3px rgb(185, 65, 81) ;
-    background-color: rgb(249, 104, 104) ;
-    width: 180px;
-    height: 200px;
-    text-align: center;
-    border-radius: 10%;
-    position: fixed;
-    display: none;
-    z-index: 100;
-    float: right;
-}
-#box #weixinBox{
-    background-color: white;
-    width: 200px;
-    height: 230px;
-    text-align: center;
-    display: none;
-    border-radius: 10%;
-    z-index: 2;
-    position: fixed;
-    float: right;
-}
-#box #weiboBox{
-    border: 1px solid slategray;
-    background-color: white ;
-    width: 180px;
-    height: 180px;
-    text-align: center;
-    position: fixed;
-    position: relative;
-    display: none;
-    z-index: 2;
-    float: right;
-}
-#box #topBox{
-    background:rgb(255, 162, 0);
-    text-align: center;
-    margin: 0px auto;
-    height: 20px;
-    width: 80px;
-    position: fixed;
-    line-height: 20px;
-    display: none;
-    z-index: 2;
-    float: right;
+/* totop area */
+#clickToTop div.rightHover::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-left-color: #ffa200;
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    margin-top: -5px;
 }

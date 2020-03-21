@@ -203,6 +203,8 @@ background-color: yellow;
 .goods-md-bg {
   background: #fff;
   min-height: 550px;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .rw400 {
@@ -735,4 +737,8 @@ background-color: yellow;
   background-color: #7e68b3;
   color: #fff;
   font-weight: bold;
+}
+#down{
+  width: 1200px;
+  margin: 0 auto;
 }
